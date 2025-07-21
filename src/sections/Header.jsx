@@ -22,7 +22,7 @@ function Header() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-4 items-center">
+        <nav className="hidden md:flex gap-5 items-center">
           <Link to={"/"} className="px-4 py-2 hover:text-blue-600">Home</Link>
 
           <div className="relative group">
