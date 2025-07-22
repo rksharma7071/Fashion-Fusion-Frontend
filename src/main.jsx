@@ -16,76 +16,47 @@ import VivoCollection from "./templates/VivoCollection.jsx";
 import OppoCollection from "./templates/OppoCollection.jsx";
 import RealmeCollection from "./templates/RealmeCollection.jsx";
 import NokiaCollection from "./templates/NokiaCollection.jsx";
+import getAppleProducts from "./getData/apple.js";
+import getSamsungCategory from "./getData/samsung.js";
+import Product from "./templates/Product.jsx";
+import getProduct from "./getData/product.js";
+import getCollection from "./getData/collection.js";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <Error404 />,
+    // errorElement: <Error404 />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <Home />,
       },
       {
-        path: "/mobiles-tablets",
-        element: <Collection />,
-      },
-      {
-        path: "/laptops-computers",
-        element: <Collection />,
-      },
-      {
-        path: "/tvs-appliances",
-        element: <Collection />,
-      },
-      {
-        path: "/audio",
-        element: <Collection />,
-      },
-      {
-        path: "/cameras",
-        element: <Collection />,
-      },
-      {
-        path: "/apple",
-        element: <AppleCollection />,
-      },
-      {
-        path: "/samsung",
-        element: <SamsungCollection />,
-      },
-      {
-        path: "/vivo",
-        element: <VivoCollection />,
-      },
-      {
-        path: "/oppo",
-        element: <OppoCollection />,
-      },
-      {
-        path: "/realme",
-        element: <RealmeCollection />,
-      },
-      {
-        path: "/nokia",
-        element: <NokiaCollection  />,
-      },
-      {
-        path: "/search",
+        path: "search",
         element: <Search />,
       },
       {
-        path: "/login",
+        path: "login",
         element: <Login />,
       },
       {
-        path: "/register",
+        path: "register",
         element: <Register />,
       },
       {
-        path: "/cart",
+        path: "cart",
         element: <Cart />,
+      },
+      {
+        path: "collections/:slug",
+        element: <Collection />,
+        loader: getCollection,
+      },
+      {
+        path: "products/:slug",
+        element: <Product />,
+        loader: getProduct,
       },
     ],
   },
