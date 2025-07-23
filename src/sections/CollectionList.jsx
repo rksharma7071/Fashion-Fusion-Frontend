@@ -42,6 +42,12 @@ function CollectionList() {
           </div>
           <div className="pt-2 uppercase font-medium">Nokia</div>
         </Link>
+        <Link to={"/collections/xiaomi"} className="text-center">
+          <div className="h-30 w-30 p-2 flex justify-center items-center rounded-full border border-gray-300 text-white shadow overflow-hidden bg-[#FF6700]">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Xiaomi_logo.svg/800px-Xiaomi_logo.svg.png" alt="Xiaomi" />
+          </div>
+          <div className="pt-2 uppercase font-medium">Xiaomi</div>
+        </Link>
       </div>
     </div>
   );
