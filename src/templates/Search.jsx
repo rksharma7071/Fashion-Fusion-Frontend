@@ -78,30 +78,8 @@ function Search() {
 
           {matchingProducts.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-
               {matchingProducts.map((item, index) => (
                 <ProductCard product={item.product} />
-                // <div
-                //   key={index}
-                // >
-                //   <img
-                //     src={item.product.image}
-                //     alt={item.product.model}
-                //     className="w-full h-48 object-contain mb-4"
-                //   />
-                //   <h3 className="text-lg font-semibold text-gray-800">
-                //     {item.product.model}
-                //   </h3>
-                //   <p className="text-sm text-gray-500 mb-1">
-                //     Brand: {item.product.brand}
-                //   </p>
-                //   <p className="text-sm text-gray-600">
-                //     Price: ₹{item.product.price.toLocaleString()}
-                //   </p>
-                //   <p className="text-sm text-gray-600">
-                //     RAM: {item.product.ram} | Storage: {item.product.storage}
-                //   </p>
-                // </div>
               ))}
             </div>
           ) : (

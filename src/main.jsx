@@ -13,6 +13,7 @@ import Cart from "./templates/Cart.jsx";
 import Product from "./templates/Product.jsx";
 import getProduct from "./getData/product.js";
 import getCollection from "./getData/collection.js";
+import { MyProvider } from "./Context/MainContent.jsx";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <MyProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </MyProvider>
   </StrictMode>
 );

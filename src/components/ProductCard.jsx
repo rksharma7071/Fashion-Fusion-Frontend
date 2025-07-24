@@ -32,24 +32,61 @@ function ProductCard({ product }) {
 
         {/* Specs */}
         <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
-          <div>
-            <span className="font-medium">RAM:</span> {product.ram}
-          </div>
-          <div>
-            <span className="font-medium">Storage:</span> {product.storage}
-          </div>
-          <div>
-            <span className="font-medium">Battery:</span> {product.battery}
-          </div>
-          <div>
-            <span className="font-medium">Display:</span> {product.display}
-          </div>
-          <div>
-            <span className="font-medium">Camera:</span> {product.camera}
-          </div>
-          <div>
-            <span className="font-medium">OS:</span> {product.os}
-          </div>
+          {product.ram && (
+            <div>
+              <span className="font-medium">RAM:</span> {product.ram}
+            </div>
+          )}
+          {product.storage && (
+            <div>
+              <span className="font-medium">Storage:</span> {product.storage}
+            </div>
+          )}
+          {product.battery && (
+            <div>
+              <span className="font-medium">Battery:</span> {product.battery}
+            </div>
+          )}
+          {product.display && (
+            <div>
+              <span className="font-medium">Display:</span> {product.display}
+            </div>
+          )}
+          {product.camera && (
+            <div>
+              <span className="font-medium">Camera:</span> {product.camera}
+            </div>
+          )}
+          {product.os && (
+            <div>
+              <span className="font-medium">OS:</span> {product.os}
+            </div>
+          )}
+          {product.type && (
+            <div>
+              <span className="font-medium">Type:</span> {product.type}
+            </div>
+          )}
+          {product.connectivity && (
+            <div>
+              <span className="font-medium">Connectivity:</span> {product.connectivity}
+            </div>
+          )}
+          {product.features && (
+            <div>
+              <span className="font-medium">Features:</span> {product.features}
+            </div>
+          )}
+          {product.megapixels && (
+            <div>
+              <span className="font-medium">Megapixels:</span> {product.megapixels}
+            </div>
+          )}
+          {product.sensor && (
+            <div>
+              <span className="font-medium">Sensor:</span> {product.sensor}
+            </div>
+          )}
         </div>
       </div>
     </Link>

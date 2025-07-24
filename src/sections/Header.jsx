@@ -22,8 +22,8 @@ function Header() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-5 items-center">
-          <Link to={"/"} className="px-4 py-2 hover:text-blue-600">Home</Link>
+        <nav className="hidden md:flex gap-5 items-center text-sm text-gray-900">
+          <Link to={"/"} className="px-4 py-2 hover:text-blue-600 ">Home</Link>
 
           <div className="relative group">
             <Link to={"/mobiles-tablets"} className="py-2 hover:text-blue-600">Mobiles & Tablets</Link>
@@ -48,8 +48,8 @@ function Header() {
           </div>
 
           <Link to={"/tvs-appliances"} className="py-2 hover:text-blue-600">TVs & Appliances</Link>
-          <Link to={"/audio"} className="py-2 hover:text-blue-600">Audio</Link>
-          <Link to={"/cameras"} className="py-2 hover:text-blue-600">Cameras & Accessories</Link>
+          <Link to={"/collections/audio"} className="py-2 hover:text-blue-600">Audio</Link>
+          <Link to={"/collections/cameras"} className="py-2 hover:text-blue-600">Cameras & Accessories</Link>
         </nav>
 
         {/* Icons + Hamburger */}
